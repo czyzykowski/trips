@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="large-12 columns">
+    <h1>Next Month Trips</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Starts in</th>
+          <th>Comment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% trips.forEach(function(trip) { %>
+          <tr>
+            <td><%= trip.get('destination') %></td>
+            <td><%= trip.get('start_date') %></td>
+            <td><%= trip.get('end_date') %></td>
+            <td><%= trip.get('start_in') %></td>
+            <td><%= trip.get('comment') %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <ul class="button-group">
+      <li><a class="button" href="#trips">Back</a></li>
+    </ul>
+  </div>
+</div>

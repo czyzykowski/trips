@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="large-12 columns">
+    <h1>Your trips</h1>
+    <% if (trips) { %>
+      <table style="width: 100%">
+        <thead>
+          <tr>
+            <th>Destination</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Starts in</th>
+            <th>Comment</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% trips.forEach(function(trip) { %>
+            <tr>
+              <td><%= trip.get('destination') %></td>
+              <td><%= trip.get('start_date') %></td>
+              <td><%= trip.get('end_date') %></td>
+              <td><%= trip.get('start_in') %></td>
+              <td><%= trip.get('comment') %></td>
+              <td>
+                <a href="#trips/edit/<%= trip.get('id') %>"
+                   class="button small secondary" style="margin: 0">Edit</a>
+              </td>
+              <td>
+                <a href="#trips/delete/<%= trip.get('id') %>"
+                   class="button small secondary" style="margin: 0">Delete</a>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    <% } %>
+    <div class="button-bar">
+      <ul class="button-group">
+        <li><a class="button" href="#trips/add">Add new trip</a></li>
+        <li><a class="button" href="#trips/next-month">Next month</a></li>
+      </ul>
+      <% if (showUsersLink) { %>
+      <ul class="button-group">
+        <li><a class="button" href="#users">Users</a></li>
+      </ul>
+      <% } %>
+      <ul class="button-group">
+        <li><a class="button" href="#logout">Logout</a></li>
+      </ul>
+    </div>
+
+    <div id="toolbar"></div>
+  </div>
+</div>

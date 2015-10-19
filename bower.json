@@ -1,0 +1,10 @@
+{
+  "name": "trips",
+  "dependencies": {
+    "backbone": "~1.2.3",
+    "jquery": "~2.1.4",
+    "underscore": "~1.8.3",
+    "foundation": "~5.5.3",
+    "backbone.syphon": "~0.6.3"
+  }
+}

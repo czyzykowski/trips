@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Trips</title>
+    <link href="/static/normalize.css" rel="stylesheet">
+    <link href="/static/foundation.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="row">
+      <div class="large-10 large-centered columns">
+        <div id="content"></div>
+      </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+
+    <script type="text/template" id="login-tmpl">
+      {% include "_login_tmpl.html" %}
+    </script>
+    <script type="text/template" id="trips-list-tmpl">
+      {% include "_trips_list_tmpl.html" %}
+    </script>
+    <script type="text/template" id="add-trip-tmpl">
+      {% include "_add_trip_tmpl.html" %}
+    </script>
+    <script type="text/template" id="edit-trip-tmpl">
+      {% include "_edit_trip_tmpl.html" %}
+    </script>
+    <script type="text/template" id="next-month-tmpl">
+      {% include "_next_month_tmpl.html" %}
+    </script>
+    <script type="text/template" id="users-list-tmpl">
+      {% include "_users_list_tmpl.html" %}
+    </script>
+    <script type="text/template" id="add-user-tmpl">
+      {% include "_add_user_tmpl.html" %}
+    </script>
+    <script type="text/template" id="edit-user-tmpl">
+      {% include "_edit_user_tmpl.html" %}
+    </script>
+  </body>
+</html>
